@@ -1,0 +1,63 @@
+{
+    "dataset": "gen1_pokemon",
+    "steward": "Dwayne Kruydenhof",
+    "rules": {
+        "column_names": "Strip leading/trailing whitespace from all headers.",
+        "categorical_formatting": "Strip whitespace and apply .str.title() to Type1 and Type2.",
+        "missing_values": "Fill NaN in Type2 with 'None'.",
+        "data_types": "Enforce numeric types on HP, Attack, Defense, Base_Total, and Evolutions.",
+        "deduplication": "Drop duplicates based on the 'Name' column."
+    },
+    "mappings": [
+        {
+            "source": " Number ",
+            "target": "Number",
+            "type": "int"
+        },
+        {
+            "source": " Name ",
+            "target": "Name",
+            "type": "string"
+        },
+        {
+            "source": " Type1 ",
+            "target": "Type1",
+            "type": "string"
+        },
+        {
+            "source": " Type2 ",
+            "target": "Type2",
+            "type": "string"
+        },
+        {
+            "source": " Base_Total ",
+            "target": "Base_Total",
+            "type": "int"
+        },
+        {
+            "source": " HP ",
+            "target": "HP",
+            "type": "int"
+        },
+        {
+            "source": " Attack ",
+            "target": "Attack",
+            "type": "int"
+        },
+        {
+            "source": " Defense ",
+            "target": "Defense",
+            "type": "int"
+        },
+        {
+            "source": " Evolutions ",
+            "target": "Evolutions",
+            "type": "int"
+        },
+        {
+            "source": "Legendary ",
+            "target": "Legendary",
+            "type": "int"
+        }
+    ]
+}
